@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freight - Roel's Notebook</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+    <header class="lg:fixed w-full flex justify-center">
+        <nav
+            class="w-screen lg:w-4xl xl:w-6xl 2xl:w-7xl text-zinc-700 flex justify-between py-3 px-6 shadow lg:rounded-2xl backdrop-blur-md bg-transparent sm:m-0 lg:my-6">
+            <a class="text-2xl font-medium opacity-75" href="../index.html">Roel's Notebook</a>
+            <a class="text-zinc-700 opacity-75" id="about"></a>
+        </nav>
+    </header>
+
+    <main class="w-full min-h-160 md:pt-20 lg:p-20 lg:pt-30">
+        <section class="lg:shadow p-15 lg:rounded-3xl">
+            <h2 class="font-medium text-3xl">Freight Calculator</h2>
+            <hr class="border-gray-400 my-6 h-px">
+
+            <div class="w-full grid grid-rows-1 grid-cols-1 items-start gap-5 my-5">
+                <div class="mx-auto w-full max-w-md">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <form id="salaryForm">
+                            <div class="mb-4">
+                                <label for="employees" class="block text-gray-700 text-sm font-bold mb-2">Employee
+                                    Amount:</label>
+                                <input type="number" id="employees" name="employees"
+                                    class="w-full p-3 border rounded-md bg-gray-100" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="days" class="block text-gray-700 text-sm font-bold mb-2">Day Amount:</label>
+                                <input type="number" id="days" name="days"
+                                    class="w-full p-3 border rounded-md bg-gray-100" required>
+                            </div>
+                            <button type="button" onclick="calculateFreight()"
+                                class="bg-green-500 hover:bg-green-600 text-white w-full p-3 rounded-md">Calculate New
+                                Salary</button>
+                        </form>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Total Price:</label>
+                            <input type="text" id="result" class="w-full p-3 border rounded-md bg-gray-100" readonly>
+                        </div>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Per-Employee Price:</label>
+                            <input type="text" id="pricePerEmployee" class="w-full p-3 border rounded-md bg-gray-100" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-400 h-px">
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 flex justify-center items-center h-20 w-full flex-col">
+        <p class="text-white text-center">All rights reserved © - Pedro Eduardo Roel</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
